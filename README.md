@@ -18,6 +18,18 @@ It is for educational use only. Run it only on your own computer.
 
 ## How to run
 
+### Option A: XAMPP (Windows)
+
+1. Install and open **XAMPP**, then start **Apache** in the Control Panel (MySQL is not needed).
+2. Copy this whole folder into `C:\xampp\htdocs\` so you have `C:\xampp\htdocs\xss-demo\`.
+3. Open the vulnerable version: http://localhost/xss-demo/vulnerable/register.php
+4. Create an account, log in, then post a message on the Who Did It page.
+5. For the secure version, use http://localhost/xss-demo/secure/register.php
+
+If a page shows an error saving data, make sure the `vulnerable` and `secure` folders are writable so `users.json` and `posts.json` can be created.
+
+### Option B: PHP built-in server
+
 Requires PHP 8 or newer.
 
 ```
@@ -25,8 +37,7 @@ cd vulnerable
 php -S localhost:8000
 ```
 
-Open http://localhost:8000/register.php, create an account, log in, then post a message.
-To try the secure version, run the same command inside `secure/`.
+Open http://localhost:8000/register.php. To try the secure version, run the same command inside `secure/`.
 
 ## Try the attack (vulnerable version)
 
